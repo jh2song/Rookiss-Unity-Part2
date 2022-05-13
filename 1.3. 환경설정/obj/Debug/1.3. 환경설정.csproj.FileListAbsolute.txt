@@ -1,0 +1,7 @@
+C:\Users\spec0\Desktop\Project\2022\05\Part2\1.3. 환경설정\bin\Debug\_1._3.환경설정.exe.config
+C:\Users\spec0\Desktop\Project\2022\05\Part2\1.3. 환경설정\bin\Debug\_1._3.환경설정.exe
+C:\Users\spec0\Desktop\Project\2022\05\Part2\1.3. 환경설정\bin\Debug\_1._3.환경설정.pdb
+C:\Users\spec0\Desktop\Project\2022\05\Part2\1.3. 환경설정\obj\Debug\1.3. 환경설정.csproj.AssemblyReference.cache
+C:\Users\spec0\Desktop\Project\2022\05\Part2\1.3. 환경설정\obj\Debug\1.3. 환경설정.csproj.CoreCompileInputs.cache
+C:\Users\spec0\Desktop\Project\2022\05\Part2\1.3. 환경설정\obj\Debug\_1._3.환경설정.exe
+C:\Users\spec0\Desktop\Project\2022\05\Part2\1.3. 환경설정\obj\Debug\_1._3.환경설정.pdb
