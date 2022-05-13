@@ -10,6 +10,9 @@ namespace _1._3.환경설정
     {
         static void Main(string[] args)
         {
+            Board board = new Board();
+            board.Initialize();
+
             Console.CursorVisible = false;
 
             const int WAIT_TICK = 1000 / 30;
