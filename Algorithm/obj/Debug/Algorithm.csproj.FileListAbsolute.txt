@@ -1,0 +1,14 @@
+C:\Users\spec0\Desktop\Project\2022\05\Part2\1.3. 환경설정\bin\Debug\Algorithm.exe.config
+C:\Users\spec0\Desktop\Project\2022\05\Part2\1.3. 환경설정\bin\Debug\Algorithm.exe
+C:\Users\spec0\Desktop\Project\2022\05\Part2\1.3. 환경설정\bin\Debug\Algorithm.pdb
+C:\Users\spec0\Desktop\Project\2022\05\Part2\1.3. 환경설정\obj\Debug\Algorithm.csproj.AssemblyReference.cache
+C:\Users\spec0\Desktop\Project\2022\05\Part2\1.3. 환경설정\obj\Debug\Algorithm.csproj.CoreCompileInputs.cache
+C:\Users\spec0\Desktop\Project\2022\05\Part2\1.3. 환경설정\obj\Debug\Algorithm.exe
+C:\Users\spec0\Desktop\Project\2022\05\Part2\1.3. 환경설정\obj\Debug\Algorithm.pdb
+C:\Users\spec0\Desktop\Project\2022\05\Part2\Algorithm\bin\Debug\Algorithm.exe.config
+C:\Users\spec0\Desktop\Project\2022\05\Part2\Algorithm\bin\Debug\Algorithm.exe
+C:\Users\spec0\Desktop\Project\2022\05\Part2\Algorithm\bin\Debug\Algorithm.pdb
+C:\Users\spec0\Desktop\Project\2022\05\Part2\Algorithm\obj\Debug\Algorithm.csproj.AssemblyReference.cache
+C:\Users\spec0\Desktop\Project\2022\05\Part2\Algorithm\obj\Debug\Algorithm.csproj.CoreCompileInputs.cache
+C:\Users\spec0\Desktop\Project\2022\05\Part2\Algorithm\obj\Debug\Algorithm.exe
+C:\Users\spec0\Desktop\Project\2022\05\Part2\Algorithm\obj\Debug\Algorithm.pdb
