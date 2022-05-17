@@ -8,7 +8,7 @@ namespace Practice01
 {
     class Board
     {
-        enum MazeType
+        public enum MazeType
         {
             Empty,
             Wall
@@ -22,17 +22,16 @@ namespace Practice01
 
         const char SYMBOL = '\u25A0';
         
-        private Player Player;
+        private Player _player;
         public int Size { get; private set; } // 가로나 세로의 사이즈
-        private MazeType[,] _board;
-
+        public MazeType[,] Maze;
 
         public Board(int size, Player player)
         {
             Size = size;
-            Player = player;
+            _player = player;
 
-            _board = new MazeType[size, size];
+            Maze = new MazeType[size, size];
 
             // 미로 생성
             SetSideWinder();
@@ -51,11 +50,11 @@ namespace Practice01
                     // y, x 둘 중 하나가 짝수면 벽, 아니면 빈 공간
                     if (y % 2 == 0 || x % 2 == 0)
                     {
-                        _board[y, x] = MazeType.Wall;
+                        Maze[y, x] = MazeType.Wall;
                     }
                     else
                     {
-                        _board[y, x] = MazeType.Empty;
+                        Maze[y, x] = MazeType.Empty;
                     }
                 }
             }
@@ -75,13 +74,13 @@ namespace Practice01
 
                     if (y == Size - 2)
                     {
-                        _board[y, x + 1] = MazeType.Empty;
+                        Maze[y, x + 1] = MazeType.Empty;
                         continue;
                     }
 
                     if (x == Size - 2)
                     {
-                        _board[y + 1, x] = MazeType.Empty;
+                        Maze[y + 1, x] = MazeType.Empty;
                         continue;
                     }
 
@@ -90,12 +89,12 @@ namespace Practice01
                     {
                         case Direction.Down:
                             int offset = rand.Next(0, count);
-                            _board[y + 1, x - offset * 2] = MazeType.Empty;
+                            Maze[y + 1, x - offset * 2] = MazeType.Empty;
                             count = 1;
                             break;
 
                         case Direction.Right:
-                            _board[y, x + 1] = MazeType.Empty;
+                            Maze[y, x + 1] = MazeType.Empty;
                             count++;
                             break;
                     }
@@ -111,7 +110,21 @@ namespace Practice01
             {
                 for (int x = 0; x < Size; x++)
                 {
-                    switch (_board[y, x])
+                    if (y == _player.PosY && x == _player.PosX)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.Write(SYMBOL);
+                        continue;
+                    }
+
+                    if (y == _player.EndY && x == _player.EndX)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write(SYMBOL);
+                        continue;
+                    }
+
+                    switch (Maze[y, x])
                     {
                         case MazeType.Empty:
                             Console.ForegroundColor = ConsoleColor.Green;

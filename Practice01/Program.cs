@@ -13,9 +13,9 @@ namespace Practice01
             // 입력
 
             // 로직
-            Player player = new Player(1, 1);
+            Player player = new Player(1, 1, 23, 23);
             Board board = new Board(25, player);
-
+            player.SetBoard(board);
             // 렌더링
             Console.CursorVisible = false;
 
@@ -26,11 +26,14 @@ namespace Practice01
                 Console.SetCursorPosition(0, 0);
 
                 int currentTick = System.Environment.TickCount;
-                if (currentTick - lastTick > MAX_TIME)
+                if (currentTick - lastTick < MAX_TIME)
                     continue;
                 lastTick = currentTick;
 
                 board.Render();
+                if (player.PosY == 23 && player.PosX == 23)
+                    return;
+                player.Move();
             }
             
         }
