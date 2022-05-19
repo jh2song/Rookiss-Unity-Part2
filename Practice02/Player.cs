@@ -56,13 +56,13 @@ namespace Practice02
 
 
 			while (queue.Count > 0)
-            {
+			{
 				Pos nowPos = queue.Dequeue();
 				int nowY = nowPos.Y;
 				int nowX = nowPos.X;
 
 				for (int i = 0; i < 4; i++)
-                {
+				{
 					int nextY = nowY + frontY[i];
 					int nextX = nowX + frontX[i];
 
@@ -80,18 +80,18 @@ namespace Practice02
 					visited[nextY, nextX] = true;
 					parent[nextY, nextX] = nowPos;
 				}
-            }
+			}
 
 			int y = _board.DestY;
 			int x = _board.DestX;
 			while (parent[y, x].Y != PosY || parent[y, x].X != PosX) // BFS의 루트까지 역추적
-            {
+			{
 				_points.Add(new Pos(y, x));
 				int tmpY = parent[y, x].Y;
 				int tmpX = parent[y, x].X;
 				y = tmpY;
 				x = tmpX;
-            }
+			}
 			_points.Add(new Pos(y, x));
 			_points.Reverse();
 		}
