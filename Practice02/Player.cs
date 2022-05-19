@@ -37,6 +37,17 @@ namespace Practice02
 			PosX = posX;
 			_board = board;
 
+			// RightHand();
+			BFS();
+		}
+
+		public void BFS()
+        {
+
+        }
+
+		public void RightHand()
+        {
 			// 현재 바라보고 있는 방향을 기준으로, 좌표 변화를 나타낸다
 			int[] frontY = new int[] { -1, 0, 1, 0 };
 			int[] frontX = new int[] { 0, -1, 0, 1 };
@@ -45,7 +56,7 @@ namespace Practice02
 
 			_points.Add(new Pos(PosY, PosX));
 			// 목적지 도착하기 전에는 계속 실행
-			while (PosY != board.DestY || PosX != board.DestX)
+			while (PosY != _board.DestY || PosX != _board.DestX)
 			{
 				// 1. 현재 바라보는 방향을 기준으로 오른쪽으로 갈 수 있는지 확인.
 				if (_board.Tile[PosY + rightY[_dir], PosX + rightX[_dir]] == Board.TileType.Empty)
