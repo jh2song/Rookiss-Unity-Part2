@@ -42,12 +42,12 @@ namespace Practice02
 		}
 
 		public void BFS()
-        {
+		{
 
-        }
+		}
 
 		public void RightHand()
-        {
+		{
 			// 현재 바라보고 있는 방향을 기준으로, 좌표 변화를 나타낸다
 			int[] frontY = new int[] { -1, 0, 1, 0 };
 			int[] frontX = new int[] { 0, -1, 0, 1 };
