@@ -1,0 +1,7 @@
+C:\Users\spec0\Desktop\Project\2022\05\Part2\Practice02\bin\Debug\Practice02.exe.config
+C:\Users\spec0\Desktop\Project\2022\05\Part2\Practice02\bin\Debug\Practice02.exe
+C:\Users\spec0\Desktop\Project\2022\05\Part2\Practice02\bin\Debug\Practice02.pdb
+C:\Users\spec0\Desktop\Project\2022\05\Part2\Practice02\obj\Debug\Practice02.csproj.AssemblyReference.cache
+C:\Users\spec0\Desktop\Project\2022\05\Part2\Practice02\obj\Debug\Practice02.csproj.CoreCompileInputs.cache
+C:\Users\spec0\Desktop\Project\2022\05\Part2\Practice02\obj\Debug\Practice02.exe
+C:\Users\spec0\Desktop\Project\2022\05\Part2\Practice02\obj\Debug\Practice02.pdb
