@@ -43,7 +43,57 @@ namespace Practice02
 
 		public void BFS()
 		{
+			int[] frontY = new int[] { -1, 0, 1, 0 };
+			int[] frontX = new int[] { 0, -1, 0, 1 };
+			bool[,] visited = new bool[_board.Size, _board.Size];
+			Pos[,] parent = new Pos[_board.Size, _board.Size];
 
+			// 처음 세팅
+			Queue<Pos> queue = new Queue<Pos>();
+			queue.Enqueue(new Pos(PosY, PosX));
+			visited[PosY, PosX] = true;
+			parent[PosY, PosX] = new Pos(PosY, PosX);
+
+
+			while (queue.Count > 0)
+            {
+				Pos nowPos = queue.Dequeue();
+				int nowY = nowPos.Y;
+				int nowX = nowPos.X;
+
+				for (int i = 0; i < 4; i++)
+                {
+					int nextY = nowY + frontY[i];
+					int nextX = nowX + frontX[i];
+
+					// range 검사
+					if (nextY < 0 || nextY >= _board.Size || nextX < 0 || nextX >= _board.Size)
+						continue;
+					// 방문했으면 continue
+					if (visited[nextY, nextX])
+						continue;
+					// 벽이라면 continue
+					if (_board.Tile[nextY, nextX] == Board.TileType.Wall)
+						continue;
+
+					queue.Enqueue(new Pos(nextY, nextX));
+					visited[nextY, nextX] = true;
+					parent[nextY, nextX] = nowPos;
+				}
+            }
+
+			int y = _board.DestY;
+			int x = _board.DestX;
+			while (parent[y, x].Y != PosY || parent[y, x].X != PosX) // BFS의 루트까지 역추적
+            {
+				_points.Add(new Pos(y, x));
+				int tmpY = parent[y, x].Y;
+				int tmpX = parent[y, x].X;
+				y = tmpY;
+				x = tmpX;
+            }
+			_points.Add(new Pos(y, x));
+			_points.Reverse();
 		}
 
 		public void RightHand()
