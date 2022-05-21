@@ -103,19 +103,40 @@ namespace Practice01
 
         }
 
-        public void Render()
+        const int MOVE_TICK = 30;
+        static int _sumTick = 0;
+        int idx = 0;
+
+        public void Render(int deltaTick)
         {
+            if (idx >= _player.GetPoints().Count)
+			{
+                // 초기화
+                _player = new Player(1, 1, 23, 23);
+                Board _board = new Board(25, _player);
+                _player.SetBoard(_board);
+                SetSideWinder();
+                _player.AStar();
+                idx = 0;
+                return;
+			}
+
+            _sumTick += deltaTick;
+            if (deltaTick < _sumTick)
+                return;
+            _sumTick = 0;
+
             ConsoleColor prev = Console.ForegroundColor;
             for (int y = 0; y < Size; y++)
             {
                 for (int x = 0; x < Size; x++)
                 {
-                    if (y == _player.PosY && x == _player.PosX)
-                    {
+                    if (y == _player.GetPoints()[idx].Y && x == _player.GetPoints()[idx].X)
+					{
                         Console.ForegroundColor = ConsoleColor.Blue;
                         Console.Write(SYMBOL);
                         continue;
-                    }
+					}
 
                     if (y == _player.EndY && x == _player.EndX)
                     {
@@ -139,6 +160,7 @@ namespace Practice01
                 Console.WriteLine();
             }
             Console.ForegroundColor = prev;
+            idx++;
         }
     }
 }
